@@ -1,6 +1,3 @@
-/**
- * Created by guidobakkes on 03/03/16.
- */
 var canvas = document.getElementById('canvas');
 var context = canvas.getContext('2d');
 

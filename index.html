@@ -3,13 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <title>Sketchy</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body style="margin: 0">
+    <div id="toolbar">
+        <div id="rad">
+            Radius <span id="radval">10</span>
+            <div id="decrad" class="radcontrol">-</div>
+            <div id="incrad" class="radcontrol">+</div>
+        </div>
+    </div>
     <canvas id="canvas" style="display: block">
         Don't lie, you're using Internet Explorer, aren't you?
 
         You are the reason the world suffers.
     </canvas>
     <script src="main.js"></script>
+    <script src="radius.js"></script>
 </body>
 </html>
