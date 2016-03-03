@@ -5,14 +5,26 @@ var canvas = document.getElementById('canvas');
 var context = canvas.getContext('2d');
 
 var radius = 10;
+var dragging = false;
 
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 
 var putPoint = function(e) {
-    context.beginPath();
-    context.arc(e.offsetX, e.offsetY, radius, 0, Math.PI*2)
-    context.fill();
+    if (dragging) {
+        context.beginPath();
+        context.arc(e.clientX, e.clientY, radius, 0, Math.PI * 2)
+        context.fill();
+    }
 }
 
-canvas.addEventListener('mousedown', putPoint);
+var engage = function() {
+    dragging = true;
+}
+
+var disengage = function() {
+    dragging = false;
+}
+canvas.addEventListener('mousedown', engage);
+canvas.addEventListener('mousemove', putPoint);
+canvas.addEventListener('mouseup', disengage);
