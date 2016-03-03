@@ -26,4 +26,14 @@
     display: inline-block;
     text-align: center;
     padding: 5px;
+    margin-left: 5px;
+}
+
+.header {
+    font-family: 'Lobster';
+    font-size: 30px;
+    display: inline-block;
+    float: left;
+    margin: 0;
+    padding: 0 20px;
 }
